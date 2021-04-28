@@ -9,5 +9,6 @@ public interface UserService {
 
     User consultUser(String userName, String password);
     User setUser(User user);
-    public User upDatePassword(User user);
+    public User upDateDescription(User user);
+    List<User> consultUsers();
 }

@@ -19,14 +19,18 @@ public class UserServiceImpl implements UserService {
 
         return userRepository.consultUser(userName,password);
     }
+    @Override
+    public List<User> consultUsers() {
 
+        return userRepository.consultUsers();
+    }
     @Override
     public User setUser(User user) {
         return userRepository.createUser(user);
     }
     @Override
-    public User upDatePassword(User user) {
-        return userRepository.upDatePassword(user);
+    public User upDateDescription(User user) {
+        return userRepository.upDateDescription(user);
     }
 
 

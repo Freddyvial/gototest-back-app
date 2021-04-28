@@ -3,6 +3,7 @@ package com.gotod.gototest.controllers;
 import com.gotod.gototest.domain.User;
 import com.gotod.gototest.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,11 +20,14 @@ public class UserController {
         return userService.consultUser(userName, password);
     }
 
-    @PostMapping(path = "/upDatePassword", consumes = "application/json", produces = "application/json")
+    @PostMapping(path = "/upDateDescription", consumes = "application/json", produces = "application/json")
     public User upDatePassword(@RequestBody User user) {
 
-        return userService.upDatePassword(user);
+        return userService.upDateDescription(user);
 
-
+    }
+    @GetMapping("/consultUsers")
+    public List<User> consultUsers() {
+        return userService.consultUsers();
     }
 }

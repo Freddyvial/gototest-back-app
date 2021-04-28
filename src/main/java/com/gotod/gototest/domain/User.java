@@ -5,6 +5,25 @@ public class User {
     private String userName;
     private String passWord;
     private Role role;
+    private  Country country;
+    private String description;
+    public Country getCountry() {
+        return country;
+    }
+
+    public void setCountry(Country country) {
+        this.country = country;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+
 
     public String getId() {
         return id;
